@@ -14,7 +14,7 @@ export default function Header() {
         />
     </div>
     <div>
-        <Link href="/mainmenu">
+        <Link href="/MainMenu">
             <Image
             src="/LogoMenu.png"       // Path to image in /public folder
             alt="Main Menu"
