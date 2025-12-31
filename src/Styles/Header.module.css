@@ -1,0 +1,12 @@
+.header {
+  position: fixed;        /* Fixes the header in place */
+  top: 0;                 /* Sticks it to the very top */
+  left: 0;                /* Aligns it to the left edge */
+  width: 100%;            /* Makes it span the full width */
+  background-color: transparent; /* Transparent background */
+  display: flex;
+  justify-content: space-between; /* Push items to far left and far right */
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;          /* Ensures it stays above other elements */
+}
