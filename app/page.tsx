@@ -1,6 +1,6 @@
-import Header from "../src/Components/hearder";
-import Carousel from "../src/Components/Carousel"
-import AnimatedTitle from "../src/Components/AnimatedTitle"
+import Header from "../src/components/hearder";
+import Carousel from "../src/components/Carousel"
+import AnimatedTitle from "../src/components/AnimatedTitle"
 export default function Home() {
   return (
     <div>

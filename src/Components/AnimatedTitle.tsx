@@ -1,31 +1,39 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 import styles from '../Styles/Animated.module.css';
 
-export default function AnimatedTitle() {
+export default function AnimatedOverlay() {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(false), 3000); // 3 seconds
+    const timer = setTimeout(() => setShow(false), 3000); // overlay lasts 3s
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <AnimatePresence>
       {show && (
-        <motion.h1
-          className={styles.title}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 1.2 }}
+        <motion.div
+          className={styles.overlay}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
         >
-          MIDNIGHT ECHO
-        </motion.h1>
+          <Image
+            src="/Logo.png" // logo in /public
+            alt="Midnight Echo Logo"
+            width={500}
+            height={500}
+            priority
+          />
+        </motion.div>
       )}
     </AnimatePresence>
   );
 }
+
 
