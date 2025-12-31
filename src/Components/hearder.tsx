@@ -15,7 +15,7 @@ export default function Header() {
     </div>
     <div>
         <nav>
-            <Image
+        <Image
         src="/LogoMenu.png"       // Path to image in /public folder
         alt="Main Menu"
         width={80}

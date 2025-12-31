@@ -1,0 +1,15 @@
+/* components/AnimatedTitle.module.css */
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 10px #ff0000; }
+  50% { text-shadow: 0 0 20px #ff3333; }
+  100% { text-shadow: 0 0 10px #ff0000; }
+}
